@@ -5,6 +5,6 @@ This is a simple HTML page used to encrypt-decrypt your message with the militar
 
 The page is run entirely client-side.
 
-This uses [aes-js](http://github.com/ricmoo)'s [aes-js](http://github.com/ricmoo/aes-js) for AES encryption. Licensed under MIT.
+This uses [ricmoo](http://github.com/ricmoo)'s [aes-js](http://github.com/ricmoo/aes-js) for AES encryption. Licensed under MIT.
 
 You can freely copy, modify, distribute or do anything with this as long as you leave credits to the authors.
