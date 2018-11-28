@@ -1,0 +1,48 @@
+﻿<html>
+	<head>
+		<title>AES message utility</title>
+		<link rel="stylesheet" href="aes-util-style.css">
+		<script src="aes-library.js"></script>
+		<script src="aes-util-script.js"></script>
+	</head>
+	<body>
+		<div class="title" style="height: 60px;">
+			<h1>AES message utility</h1>
+		</div>
+		<div class="box">
+			<div class=title><h2>Input</h2></div>
+			<div class="ele">
+				<p>Mode:</p>
+				<p><label><input type=radio name=mode value=true checked>Encrypt</label>
+				<label><input type=radio name=mode value=false>Decrypt</label>
+				</p>
+			</div>
+			<div class="ele">
+				<p><label for="to-crypt">Input text:</label></p>
+				<p><textarea id="to-crypt" style="width:100%; height: 100px;"></textarea></p>
+			</div>
+			<div class="ele">
+				<p><label for="crypt-password">Password (16 characters):</label></p>
+				<input type="text" size="16" placeholder="Password" id="crypt-password" />
+				<label><input id="crypt-showpass" type="checkbox" onclick="setVisibility('crypt-password', 'crypt-showpass')" checked />Show characters</label>
+			</div>
+			<div class="ele button" onclick="doIt();">Perform</div>
+			<br>
+		</div>
+		<div class=box>
+			<div class=title><h2>Output</h2></div>
+			<div class=ele id=out><i>Nothing has been done.</i></div><span id=empty></span>
+			<div id=button-copy class="ele button" onclick="copyResult();" style="display:none">Copy</div>
+			<br>
+		</div>
+		<div class=box>
+			<div class=title><h2>About</h2></div>
+			<div class=ele><b><a href="http://en.wikipedia.org/wiki/AES">AES &ndash; Advanced encryption algorithm</a></b> is a military-level algorithm which can keep your data and messages safe. Once encrypted, you can give the thing to anyone and if they don't know the password (the key), they won't be able to know what is its content. So you can assure your rest when the message is in transit to your pal.</div>
+			<div class=ele>The whole page is run fully client-side. Nothing is sent out of your device during the use of this page.</div>
+			<div class=ele>This page was created by Lê Duy Quang. It uses <b><a href="http://github.com/ricmoo/aes-js">aes-js</a></b> by <a href="http://github.com/ricmoo">ricmoo</a>, which is licensed under MIT. You can modify and redistribute this page as long as you leave credits to the authors.</div>
+			<div class=ele>The page's source code is hosted on <a href="http://github.com/leduyquang753/AES-util">GitHub</a>.</div>
+			<br>
+		</div>
+		<br>
+	</body>
+</html>
